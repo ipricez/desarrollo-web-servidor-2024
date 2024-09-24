@@ -63,6 +63,16 @@
     } else {
         echo"<p>$numA es igual que $numB</p>";
     }
+
+    // MATCH
+    $numC = rand(-10,20);
+    $res = match(true) {
+        $numC >= -10 && $numC < 0 => "El número $numC está en el rango [-10,0)",
+        $numC >= 0 && $numC <= 10 => "El número $numC está en el rango [0,10]",
+        $numC > 10 && $numC <= 20 => "El número $numC está en el rango (10,20]",
+    }
     ?>
+
+    
 </body>
 </html>
