@@ -27,5 +27,12 @@
     endwhile;
     echo "</ul>";    
     ?>
+    <h3>Tabla 3</h3>
+    <?php
+    /*
+    CON WHILE Y LAS ESTRUCTURAS DE CONTROL NECESARIAS, MUESTRA EN UNA LISTA SIN ORDENAR
+    TODOS LOS MULTIPLOS DE 3 ENTRE 1 Y 3
+    */
+    ?>
 </body>
 </html>
