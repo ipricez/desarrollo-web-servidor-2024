@@ -71,6 +71,14 @@
                     Ejercicios de listas.
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <a href="ejercicios 1.php">ejercicios 1.php</a>
+                </td>
+                <td>
+                    Ejercicios 1.
+                </td>
+            </tr>
         </tbody>
     </table>
 </body>
