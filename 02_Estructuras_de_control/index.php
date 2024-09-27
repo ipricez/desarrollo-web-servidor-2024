@@ -76,7 +76,7 @@
                     <a href="ejercicios 1.php">ejercicios 1.php</a>
                 </td>
                 <td>
-                    Ejercicios 1.
+                    Primer listado de ejercicios del tema de estructuras de control.
                 </td>
             </tr>
         </tbody>
