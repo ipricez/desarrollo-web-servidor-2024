@@ -268,12 +268,12 @@
     -->
     <?php 
         $boletin = [
-            "3" => "Guillermo",
-            "5" => "Daiana",
-            "8" => "Ángel",
-            "7" => "Ayoub",
-            "9" => "Mateo",
-            "4" => "Joaquín"
+            "Guillermo" => "3" ,
+            "Daiana" =>"5"  ,
+            "Ángel" =>"8"  ,
+            "Ayoub" =>"7"  ,
+            "Mateo" =>"9"  ,
+            "Joaquín" =>"4"  
         ];
     ?>
     <table>
@@ -286,21 +286,23 @@
         </thead>
         <tbody>
             <?php
-            
-            foreach($boletin as $nota => $alumno) { ?>
+             asort($boletin);
+             krsort($boletin);
+            foreach($boletin as $alumno => $nota) { ?>
                 <tr>
                     <td><?php echo $alumno ?></td>
                     <td><?php echo $nota ?></td>
-                    <td>
-                        <?php 
-                            if ($nota>=5) echo "SI";
-                            else echo "NO";
-                        ?>
-                    </td>
+                    <?php
+                    if ($nota < 5) { ?>
+                        <td class="suspenso">Suspenso</td>
+                    <?php } else { ?>
+                        <td class="aprobado">Aprobado</td>
+                    <?php } ?>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
-
+    
+    
 </body>
 </html>
