@@ -66,5 +66,27 @@
     }
     print_r($autobuses);
     ?>
+
+<table border="1">
+            <thead>
+                <th>Origen</th>
+                <th>Salida</th>
+                <th>Duración</th>
+                <th>Precio</th>
+            </thead>
+            <tbody>
+                <?php
+                foreach($autobuses as $autobuh) {
+                    list($origen, $destino, $duracion, $precio) = $autobuh;
+                    echo "<tr>";
+                    echo "<td>$origen</td>";
+                    echo "<td>$destino</td>";
+                    echo "<td>$duracion</td>";
+                    echo "<td>$precio</td>";
+                    echo "<tr>";
+                }
+                ?>
+            </tbody>
+    </table>
 </body>
 </html>
