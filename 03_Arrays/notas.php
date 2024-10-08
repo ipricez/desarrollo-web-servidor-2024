@@ -33,8 +33,62 @@
     unset($notas[2]);
 
     # 3)
+    $notas = array_values($notas);
+    for($i = 0; $i < count($notas); $i++) {
+        $notas[$i][2] = rand(1,10);
+    }
 
+    # 4)
+    for($i = 0; $i < count($notas); $i++) {
+        $nota = $notas[$i][2];
+        if ($nota < 5) $notas[$i][3] = "NO APTO";
+        else $notas[$i][3] = "APTO";
+    }
 
+    # 5)
+    $_estudiante = array_column($notas,0);
+    $_asignatura = array_column($notas,1);
+    $_nota = array_column ($notas,2);
     ?>
+    <table border="1">
+            <thead>
+                <th>Estudiante</th>
+                <th>Asignatura</th>
+                <th>Nota</th>
+                <th>Calificacion</th>
+            </thead>
+            <tbody>
+                <?php
+                foreach($notas as $nota) {;
+                    echo "<tr>";
+                    echo "<td>$nota[0]</td>";
+                    echo "<td>$nota[1]</td>";
+                    echo "<td>$nota[2]</td>";
+                    echo "<td>$nota[3]</td>";
+                    echo "<tr>";
+                }
+                ?>
+            </tbody>
+    </table>
+    <br><br><br>
+    <table border="1">
+            <thead>
+                <th>Estudiante</th>
+                <th>Asignatura</th>
+                <th>Nota</th>
+                <th>Calificacion</th>
+            </thead>
+            <tbody>
+                <?php
+                foreach($notas as $nota) {
+                    list($estudiante, $asignatura, $puntos, $calificacion) = $nota;
+                    $estudiante = $nota[0];
+                    $asignatura = $nota[1];
+                    $puntos = $nota[2];
+                    $califiacion = $nota[3];
+                }
+                ?>
+            </tbody>
+    </table>
 </body>
 </html>
