@@ -20,11 +20,16 @@
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         /**
-         * 
-         * 
+         * El servidor ejecutará este bloque de código cuando recibe
+         * una petición a través del método POST
          */
         $mensaje = $_POST["mensaje"];
         echo "<h1>$mensaje</h1>";
+        /**
+         * Modificar el formulario anterior para que se pueda introducir
+         * tambien un número.
+         * El mensaje se mostrará tantas veces como indique el número.
+         */
     ?>
 </body>
 </html>
