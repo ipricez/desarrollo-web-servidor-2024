@@ -3,44 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edades</title>
+    <title>Edades</title>
 </head>
 <body>
     <?php
-    
-    /* 
-    CON IF Y CON MATCH:
-    - Si la persona tiene entre 0 y 4 años, es un bebé.
-    - Si la persona tiene entre 5 y 17 años, es menor de edad.
-    - Si la persona tiene entrr 18 y 65 años, es adulto.
-    - Si la persona tiene entre 66 y 120 años, es jubilado.
-    Si la edad está fuera de rango, es error.
-    */
-    // Forma 1
-    $edad = rand(-10,150);
-    $rango;
-    if ($edad<0 || $edad>120) {
-        $rango = "no valido";
-    } elseif ($edad<5) {
-        $rango = "bebe";
-    } elseif ($edad<18) {
-        $rango = "menor-de-edad";
-    } elseif ($edad<66) {
-        $rango = "adulto";
-    } else {
-        $rango = "jubilado";
-    }
-    echo "<p>La persona tiene $edad y es $rango</p>";
+    $edad = rand(-10,140);
 
-    // Forma 2
-    $resultado = match ($true) {
-        $edad>=0 && $edad<5 =>  "<p>La persona tiene $edad y es $rango</p>",
-        $edad>=5 && $edad<18 => "<p>La persona tiene $edad y es $rango</p>",
-        $edad >= 18 && $edad<66 => "<p>La persona tiene $edad y es $rango</p>",
-        $edad >66 && $edad<=120 => "<p>La persona tiene $edad y es $rango</p>",
-        default => "<p>La persona tiene $edad y es $rango</p>",
+    /*
+        CON IF Y CON MATCH:
+        - Si la persona tiene entre 0 y 4 años, es un BEBÉ
+        - Si la persona tiene entre 5 y 17 años, es MENOR DE EDAD
+        - Si la persona tiene entre 18 y 65 años, es ADULTO
+        - Si la persona tiene entre 66 y 120 años, es JUBILADO
+        - Si la edad está fuera de rango, es ERROR
+    */
+
+    #   Forma 1
+    if($edad >= 0 and $edad <= 4) echo "EDAD: $edad - BEBÉ";
+    elseif($edad >= 5 and $edad <= 17) echo "EDAD: $edad - MENOR DE EDAD";
+    elseif($edad >= 18 and $edad <= 65) echo "EDAD: $edad - ADULTO";
+    elseif($edad >= 66 and $edad <= 120) echo "EDAD: $edad - JUBILADO";
+    else echo "EDAD: $edad - ERROR";
+
+    #   Forma 2
+    $resultado = match(true) {
+        $edad >= 0 and $edad <= 4 => "EDAD: $edad - BEBÉ",
+        $edad >= 5 and $edad <= 17 => "EDAD: $edad - MENOR DE EDAD",
+        $edad >= 18 and $edad <= 65 => "EDAD: $edad - ADULTO",
+        $edad >= 66 and $edad <= 120 => "EDAD: $edad - JUBILADO",
+        default => "EDAD: $edad - ERROR"
     };
-    echo $resultado;
+
+    echo "<h1>$resultado</h1>";
     ?>
 </body>
 </html>

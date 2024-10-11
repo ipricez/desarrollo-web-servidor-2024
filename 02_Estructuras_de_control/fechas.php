@@ -7,12 +7,12 @@
 </head>
 <body>
     <?php
-    echo date("j");
-
-    // $numero % 4
+    //echo date("j");
     $dia = date("j");
-    if($dia%2 == 0) echo "<p>El día es par.</p>";
-    else echo "<p>El día no es par</p>";
+
+    //  HACER EL MARTES EL EJERCICIO DE LAS FECHAS
+
+    //  $numero % 4
     ?>
 </body>
 </html>

@@ -8,7 +8,8 @@
         td, th {
             border: 1px solid black;
         }
-        table, caption {
+
+        table {
             border: 2px solid black;
         }
     </style>
@@ -27,59 +28,39 @@
                 <td>
                     <a href="numeros.php">números.php</a>
                 </td>
-                <td>
-                    Ejercicios de comparaciones con números.
-                </td>
+                <td>Ejercicios de comparaciones con números.</td>
             </tr>
             <tr>
                 <td>
                     <a href="fechas.php">fechas.php</a>
                 </td>
-                <td>
-                    Ejercicios de fechas.
-                </td>
+                <td>Ejercicios de fechas.</td>
             </tr>
             <tr>
                 <td>
                     <a href="numeros_aleatorios.php">numeros_aleatorios.php</a>
                 </td>
-                <td>
-                    Ejercicios de numeros aleatorios.
-                </td>
+                <td>Ejercicios de números aleatorios.</td>
             </tr>
             <tr>
                 <td>
                     <a href="clases_semana.php">clases_semana.php</a>
                 </td>
-                <td>
-                    Ejercicios de clases de la semana.
-                </td>
+                <td>Ejercicios de las clases de la semana.</td>
             </tr>
             <tr>
                 <td>
                     <a href="edades.php">edades.php</a>
                 </td>
-                <td>
-                    Ejercicios de edades.
-                </td>
+                <td>Ejercicios de edades.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="listas.php">listas.php</a>
+                    <a href="ejercicios1.php">ejercicios1.php</a>
                 </td>
-                <td>
-                    Ejercicios de listas.
-                </td>
+                <td>Primer listado de ejercicios del tema de estructuras de control.</td>
             </tr>
-            <tr>
-                <td>
-                    <a href="ejercicios 1.php">ejercicios 1.php</a>
-                </td>
-                <td>
-                    Primer listado de ejercicios del tema de estructuras de control.
-                </td>
-            </tr>
-        </tbody>
+        <tbody>
     </table>
 </body>
 </html>
