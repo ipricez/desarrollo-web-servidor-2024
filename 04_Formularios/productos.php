@@ -23,7 +23,30 @@
          *  - Si hay stock, decimos que está disponible y su precio.
          *  - Si no hay, decimos que está agotado.
          */
-        $p
+        for ($i=0; $i < count($productos); $i++) { 
+            
+        }
     ?>
+    <table>
+        <caption>Productos</caption>
+        <thead>
+            <tr>
+                <th>Nombre Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                foreach($productos as $producto) {
+                    list($nombre_producto, $precio, $cantidad) = $producto: ?>
+                    <tr>
+                        <td><?php echo $nombre_producto ?></td>
+                        <td><?php echo $precio ?></td>
+                        <td><?php echo $cantidad ?></td>
+                    </tr>
+                <?php } ?>
+        </tbody>
+    </table>
 </body>
 </html>
