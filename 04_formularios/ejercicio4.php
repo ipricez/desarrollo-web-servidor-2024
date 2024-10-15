@@ -17,17 +17,17 @@
     <p>En los SELECT se podrá elegir entre: CELSIUS, KELVIN y FAHRENHEIT.</p>
     <!-- Formulario -->
     <form action="" method="post">
-        <input type="number" name="temperatura">
+        <input type="text" name="temperatura" placeholder="temperatura">
         <br><br>
-        <p>Formato de temperatura a tener:</p>
-        <select name="formato1" id="formato1">
+        <label>Unidad inicial: </label>
+        <select name="formato1">
             <option value="celsius">Celsius</option>
             <option value="kelvin">Kelvin</option>
             <option value="fahrenheit">Fahrenheit</option>
         </select>
         <br><br>
         <p>Formato de temperatura a querer:</p>
-        <select name="formato2" id="formato2">
+        <select name="formato2">
             <option value="celsius">Celsius</option>
             <option value="kelvin">Kelvin</option>
             <option value="fahrenheit">Fahrenheit</option>
@@ -42,31 +42,26 @@
             $formato1 = strtolower($_POST["formato1"]);
             $formato2 = strtolower($_POST["formato2"]);
 
-            $resultado = 0;
+            // Igualando aquí, me ahorro lineas de código en cada condicion.
+            $resultado = $temperatura;
 
             if ($formato1 == "celsius") {
                 if($formato2 == "kelvin") {
                     $resultado = $temperatura + 273.15;
                 } elseif ($formato2 == "fahrenheit") {
                     $resultado = (($temperatura *9/5) +32);
-                } else {
-                    $resultado = $temperatura;
                 }
             } elseif ($formato1 == "kelvin") {
                 if($formato2 == "celsius") {
                     $resultado = $temperatura - 273.15;
                 } elseif ($formato2 == "fahrenheit") {
                     $resultado = (($temperatura - 273.15)*9/5) +32;
-                } else {
-                    $resultado = $temperatura;
                 }
             } else {
                 if($formato2 == "celsius") {
                     $resultado = ($temperatura - 32)*5/9;
                 } elseif ($formato2 == "kelvin") {
                     $resultado = ($temperatura - 32)*5/9+273.15;
-                } else {
-                    $resultado = $temperatura;
                 }
             }
             echo "<p>El resultado es $resultado grados $formato2.</p>";
