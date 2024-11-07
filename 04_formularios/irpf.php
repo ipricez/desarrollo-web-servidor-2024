@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4</title>
-    <?php
-        //  Activamos los errores de PHP
-        error_reporting( E_ALL );
-        ini_set( "display_errors", 1 );
-    ?>
+    <title>Document</title>
 </head>
 <body>
-    <h2>Ejercicio 3</h2>
-    <p>Calcular el IRPF</p>
-    <!-- Formulario -->
     <form action="" method="post">
-        <input type="text" name="renta" placeholder="Renta en euros">
-        <br><br>
-        <input type="submit" value="Calcular">
+        <input type="number" name="salario" placeholder="Salario">
+        <input type="submit" value="Calcular salario bruto">
     </form>
-    <!-- Código PHP -->
     <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
+        // crear una funcion que devuelva el salario neto
+        // validar los datos antes de enviarlos a la funcion
+
+
         $salario = $_POST["salario"];
 
         $salario_final = null;
