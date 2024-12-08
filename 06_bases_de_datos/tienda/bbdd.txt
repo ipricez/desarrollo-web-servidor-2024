@@ -1,0 +1,28 @@
+*** MySQL Workbench ***
+
+CREATE DATABASE tienda_bd;
+CREATE SCHEMA tienda_bd;
+
+use tienda_bd;
+
+create table categorias(
+categoria varchar(30) primary key,
+descripcion varchar(255)
+);
+ 
+drop table productos; 
+create table productos(
+id_producto int(6) primary key auto_increment,
+nombre varchar(50),
+precio numeric(6,2),
+categoria varchar(30),
+foreign key (categoria) references categorias(categoria),
+stock int(3) default 0,
+imagen varchar(60),
+descripcion varchar(255)
+);
+
+CREATE TABLE usuarios (
+	usuario VARCHAR(15) PRIMARY KEY,
+    contrasena VARCHAR(255) NOT NULL
+);

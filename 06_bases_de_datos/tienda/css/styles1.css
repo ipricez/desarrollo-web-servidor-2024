@@ -1,0 +1,44 @@
+body{
+    background-color: #191922;
+}
+h1,h3, label{
+    color: white;
+}
+.title{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.iniciarSesion{
+    text-align:right;
+    margin: 10px;
+}
+
+.iniciarSesion_Web{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error{
+    color: red;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between ; /* Espacio entre los grupos */
+    
+  }
+  
+  .left-links,
+  .right-links {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .right-links {
+    margin-left: auto; /* Alinea este grupo a la derecha */
+  }
