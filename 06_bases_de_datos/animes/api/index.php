@@ -18,5 +18,23 @@
 
         print_r($estudios);
     ?>
+    <table>
+        <thead>
+            <tr>
+                <td>Nombre estudio</td>
+                <td>Ciudad</td>
+                <td>Año fundacion</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach($estudios as $estudio){ ?>
+                <tr>
+                    <td> <?php echo $estudio["nombre_estudio"] ?> </td>
+                    <td> <?php echo $estudio["ciudad"] ?> </td>
+                    <td> <?php echo $estudio["anno_fundación"] ?> </td>
+                </tr>
+        </tbody>
+    </table>
 </body>
 </html>
