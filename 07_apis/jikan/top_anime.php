@@ -19,6 +19,20 @@
         $animes = $datos["data"];
         #print:r($animes);
     ?>
+    <!-- Radiobutton -->
+    <form method="GET" action="">
+        <label>
+            <input type="radio" name="type" value="all" <?php echo ($type === "all") ? "checked" : ""; ?>> Todos
+        </label>
+        <label>
+            <input type="radio" name="type" value="tv" <?php echo ($type === "tv") ? "checked" : ""; ?>> Series de TV
+        </label>
+        <label>
+            <input type="radio" name="type" value="movie" <?php echo ($type === "movie") ? "checked" : ""; ?>> Película
+        </label>
+        <button type="submit">Filtrar</button>
+    </form>
+
     <!-- Tabla con titulo, nota, imagen y enlace al anime-->
      <table>
         <thead>
@@ -42,7 +56,7 @@
         </tbody>
      </table>
 
-    <!-- Radiobutton -->
-     
+    
+
 </body>
 </html>
