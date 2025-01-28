@@ -41,5 +41,8 @@
             <?php } ?>
         </tbody>
      </table>
+
+    <!-- Radiobutton -->
+     
 </body>
 </html>
